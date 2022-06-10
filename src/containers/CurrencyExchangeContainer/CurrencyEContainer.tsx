@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import CurrencyExchange from '../../components/CurrencyExchange/CurrencyExchange';
 import { CurrencyState, CurrencyType } from '../../redux/currencyReducer';
 import { Dispatch } from 'redux';
@@ -11,6 +11,7 @@ import {
 import { connect, ConnectedProps } from 'react-redux';
 
 const CurrencyEContainer: React.FC<TProps> = props => {
+    useState()
 
     const {
         currencies,

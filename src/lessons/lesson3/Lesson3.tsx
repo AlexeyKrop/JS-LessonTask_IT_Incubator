@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import API from './API';
 import './lesson_3';
+import {log} from "util";
 
 const Lesson3 = () => {
     const [searchName, setSearchName] = useState('');
     const [searchResult, setSearchResult] = useState('');
     const [searchNameByType, setSearchNameByType] = useState('');
     const [serachResultByType, setSerachResultByType] = useState('');
+    type SearchFilmForTitleType = {Title: string, Year: string, imdbID: string, Type: string, Poster: string}
     const searchFilm = () => {
 
         API.searchFilmsByTitle(searchName)
+          .then(data => data.Search.map((f: SearchFilmForTitleType) => {
+              console.log(f.Title)
+              setSearchResult(f.Title)
+          }))
+          .catch(Error=>console.log(Error))
 
 
 

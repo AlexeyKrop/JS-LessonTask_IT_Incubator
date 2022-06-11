@@ -9,9 +9,8 @@ const axiosInstance = axios.create(configOMB);
 
 const API = {
     searchFilmsByTitle: (title: string) => {
-        console.log(title)
-        return axiosInstance.get(`http://www.omdbapi.com/?i=tt3896198&apikey=f3f43142`)
-          .then(data => console.log(data.data))
+        return axiosInstance.get(`http://www.omdbapi.com/?s=title&apikey=f3f43142`)
+          .then(data => console.log(data.data.Search))
     },
     searchFilmsByType: (title: string, type: string) => {
     }

@@ -4,13 +4,16 @@ import './lesson_3';
 
 const Lesson3 = () => {
     const [searchName, setSearchName] = useState('');
-    const [serachResult, setSerachResult] = useState('');
+    const [searchResult, setSearchResult] = useState('');
     const [searchNameByType, setSearchNameByType] = useState('');
     const [serachResultByType, setSerachResultByType] = useState('');
-
     const searchFilm = () => {
 
         API.searchFilmsByTitle(searchName)
+
+
+
+        // setSearchResult
     };
 
     const searchByType = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -26,7 +29,7 @@ const Lesson3 = () => {
                 <input type="text" value={searchName} onChange={(e) => setSearchName(e.currentTarget.value)}/>
                 <button onClick={searchFilm}>Search</button>
                 <div>
-                    {serachResult}
+                    {searchResult}
                 </div>
             </div>
 

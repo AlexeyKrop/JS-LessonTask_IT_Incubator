@@ -9,6 +9,7 @@ const Lesson3 = () => {
     const [serachResultByType, setSerachResultByType] = useState('');
 
     const searchFilm = () => {
+
         API.searchFilmsByTitle(searchName)
     };
 

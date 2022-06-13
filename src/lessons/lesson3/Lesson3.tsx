@@ -13,7 +13,6 @@ const Lesson3 = () => {
 
         API.searchFilmsByTitle(searchName)
           .then(data => data.Search.map((f: SearchFilmForTitleType) => {
-              console.log(f.Title)
               setSearchResult(f.Title)
           }))
           .catch(Error=>console.log(Error))

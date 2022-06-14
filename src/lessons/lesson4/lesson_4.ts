@@ -7,16 +7,18 @@ console.log('lesson 4');
 // Task 01
 // Создайте промис, который постоянно находиться в состоянии pending.
 // В конструкторе промиса выведите в консоль сообщение "Promise is created".
-const promise = new Promise(() => {
-  console.log("Promise is created")
-})
-console.log(promise)
+// const promise = new Promise(() => {
+//   console.log("Promise is created")
+// })
+// console.log(promise)
 // Task 02
 // Создайте промис, который после создания сразу же переходит в состояние resolve
 // и возвращает строку 'Promise Data'
 // Получите данные промиса и выведите их в консоль
-
-
+// const promiseTwo = new Promise((res, rej) => {
+//   rej('Promise Error' )
+// })
+// console.log(promiseTwo)
 // Task 03
 // Создайте промис, который после создания сразу же переходит в состояние rejected
 // и возвращает строку 'Promise Error'
@@ -59,6 +61,6 @@ console.log(promise)
 // и выведите в консоль {name, age, city}
 
 
-
 // just a plug
-export default ()=>{};
+export default () => {
+};

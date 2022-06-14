@@ -16,15 +16,17 @@ console.log('lesson 4');
 // и возвращает строку 'Promise Data'
 // Получите данные промиса и выведите их в консоль
 // const promiseTwo = new Promise((res, rej) => {
-//   rej('Promise Error' )
+//   res('Promise Data' )
 // })
 // console.log(promiseTwo)
 // Task 03
 // Создайте промис, который после создания сразу же переходит в состояние rejected
 // и возвращает строку 'Promise Error'
 // Получите данные промиса и выведите их в консоль
-
-
+// const promiseTwo = new Promise((res, rej) => {
+//   rej('Promise Error' )
+// })
+// console.log(promiseTwo)
 // Task 04
 // Создайте промис, который переходит в состояние resolved через 3с.
 // (Используйте setTimeout)

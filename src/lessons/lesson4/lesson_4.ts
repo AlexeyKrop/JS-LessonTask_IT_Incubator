@@ -1,4 +1,4 @@
-
+import {log} from "util";
 
 
 console.log('lesson 4');
@@ -18,18 +18,14 @@ const promise = new Promise(() => {
 // Создайте промис, который после создания сразу же переходит в состояние resolve
 // и возвращает строку 'Promise Data'
 // Получите данные промиса и выведите их в консоль
-// const promiseTwo = new Promise((resolve) => {
-//   resolve("Promise Data");
-// }).then((data) => console.log(data));
+Promise.resolve('Promise Data').then((value) => {
+  console.log(value); // "Success"
+})
 // Task 03
 // Создайте промис, который после создания сразу же переходит в состояние rejected
 // и возвращает строку 'Promise Error'
 // Получите данные промиса и выведите их в консоль
-const promiseThree = new Promise((resolve, rejected) => {
-  rejected("Promise Error");
-})
-  .then((result) => console.log(result))
-  .catch((error) => console.log(error));
+Promise.reject('Promise Error').catch(error => console.log(error))
 // Task 04
 // Создайте промис, который переходит в состояние resolved через 3с.
 // (Используйте setTimeout)

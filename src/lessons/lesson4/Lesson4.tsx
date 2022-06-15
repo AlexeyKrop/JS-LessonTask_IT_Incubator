@@ -1,9 +1,9 @@
 import React from 'react'
 import './lesson_4';
 
+
 const createPromiseHandler = () => {
-  const promise = new Promise(() => {})
-  console.log(promise)
+
 }
 const Lesson4 = () => {
     return (

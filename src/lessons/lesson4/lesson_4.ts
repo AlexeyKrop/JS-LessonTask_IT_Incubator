@@ -10,22 +10,22 @@ console.log('lesson 4');
 // Task 01
 // Создайте промис, который постоянно находиться в состоянии pending.
 // В конструкторе промиса выведите в консоль сообщение "Promise is created".
-const promise = new Promise(() => {
-  console.log("Promise is created")
-})
+// const promise = new Promise(() => {
+//   console.log("Promise is created")
+// })
 // console.log(promise)
 // Task 02
 // Создайте промис, который после создания сразу же переходит в состояние resolve
 // и возвращает строку 'Promise Data'
 // Получите данные промиса и выведите их в консоль
-Promise.resolve('Promise Data').then((value) => {
-  console.log(value); // "Success"
-})
+// Promise.resolve('Promise Data').then((value) => {
+//   console.log(value); // "Success"
+// })
 // Task 03
 // Создайте промис, который после создания сразу же переходит в состояние rejected
 // и возвращает строку 'Promise Error'
 // Получите данные промиса и выведите их в консоль
-Promise.reject('Promise Error').catch(error => console.log(error))
+// Promise.reject('Promise Error').catch(error => console.log(error))
 // Task 04
 // Создайте промис, который переходит в состояние resolved через 3с.
 // (Используйте setTimeout)
@@ -49,7 +49,7 @@ Promise.reject('Promise Error').catch(error => console.log(error))
 // описаного выше объекта: свойство promise получает новый созданный промис,
 // свойства resolve и reject получают ссылки на соответствующие функции
 // resolve и reject. Следующие два обработчика запускают методы resolve и reject.
-// export const handlePromise = {
+// export const handlePromise: any = {
 //   promise: null,
 //   resolve: null,
 //   reject: null,
@@ -73,11 +73,11 @@ const onSuccess = (param: string) => {
 const print = (param: string) => {
   console.log(param)
 }
-new Promise(() => {
+const promise = new Promise((res) => {
   setTimeout(() => {
-    return "My name is"
+    res("My name is")
   },1000)
-})
+}).then((data: any) => onSuccess(data)).then(data => print(data))
 
 // Task 7
 // Создайте три промиса. Первый промис возвращает объект { name: "Anna" } через 2с,

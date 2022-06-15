@@ -11,7 +11,7 @@ const axiosInstance = axios.create(configOMB);
 
 export const API = {
     searchFilmsByTitle: (title: string) => {
-      return axiosInstance.get(`?s=${title}&apikey=f3f43142`)
+     return axiosInstance.get(`?s=${title}&apikey=f3f43142`)
         .then(data => data.data)
         .catch(Error => console.log(Error.Error))
 

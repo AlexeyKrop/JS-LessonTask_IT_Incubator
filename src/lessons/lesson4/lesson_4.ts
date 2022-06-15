@@ -85,6 +85,29 @@ const promise = new Promise((res) => {
 // Получите результаты работы промисов, объедините свойства объектов
 // и выведите в консоль {name, age, city}
 
+const pr1 = new Promise(res => {
+  setTimeout(() => {
+    res({ name: "Anna" })
+  }, 2000)
+})
+const pr2 = new Promise(res => {
+  setTimeout(() => {
+    res({age: 16})
+  }, 3000)
+
+})
+const pr3 = new Promise(res => {
+  setTimeout(() => {
+    res({city: ''})
+  }, 4000)
+})
+Promise.all<any>([pr1, pr2, pr3]).then(data=>data.map(d => {
+  for (let value of Object.values(d)) {
+    console.log(value);
+  }
+}))
+
+
 
 // just a plug
 export default () => {
